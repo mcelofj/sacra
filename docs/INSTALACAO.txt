@@ -1,0 +1,152 @@
+================================================================================
+SACRA - LANDING PAGE
+INSTRUÇÕES DE INSTALAÇÃO RÁPIDA NO WAMP SERVER
+================================================================================
+
+PASSO 1: INSTALAR O WAMP
+------------------------
+1. Baixe o WAMP Server em: https://www.wampserver.com/
+2. Instale seguindo as instruções do instalador
+3. Inicie o WAMP (o ícone deve ficar VERDE na bandeja do sistema)
+
+PASSO 2: COPIAR OS ARQUIVOS
+---------------------------
+1. Localize a pasta do WAMP (geralmente: C:\wamp64\www\)
+2. Crie uma pasta chamada "sacra" dentro de "www"
+3. Copie TODOS os arquivos deste projeto para: C:\wamp64\www\sacra\
+
+Estrutura final:
+C:\wamp64\www\sacra\
+├── assets\
+│   ├── css\
+│   ├── js\
+│   └── img\
+├── logs\
+├── index.html
+├── send-email.php
+├── .htaccess
+└── README.md
+
+PASSO 3: CONFIGURAR O EMAIL
+---------------------------
+1. Abra o arquivo: send-email.php
+2. Na linha 26, altere o email de destino:
+   $destinatario = 'seuemail@dominio.com.br';
+
+PASSO 4: ACESSAR O SITE
+-----------------------
+1. Certifique-se de que o WAMP está rodando (ícone VERDE)
+2. Abra seu navegador
+3. Digite na barra de endereços: http://localhost/sacra/
+
+PRONTO! Seu site está funcionando!
+
+================================================================================
+CONFIGURAÇÕES IMPORTANTES
+================================================================================
+
+PERSONALIZAR INFORMAÇÕES DE CONTATO
+-----------------------------------
+Edite o arquivo index.html e procure por:
+- Email: contato@agenciasacra.com.br
+- Telefone: (11) 99999-9999
+- Redes sociais: @agenciasacra
+
+ALTERAR CORES DO SITE
+---------------------
+Edite o arquivo: assets/css/style.css
+Procure por ":root" (linha 18) e altere as cores:
+--color-primary: #C2185B;        (Rosa principal)
+--color-primary-light: #F8BBD0;  (Rosa claro)
+--color-primary-dark: #880E4F;   (Rosa escuro)
+
+ADICIONAR SUAS PRÓPRIAS IMAGENS
+-------------------------------
+1. Coloque suas imagens na pasta: assets/img/
+2. Edite o arquivo index.html
+3. Substitua os nomes dos arquivos de imagem
+
+================================================================================
+SOLUÇÃO DE PROBLEMAS
+================================================================================
+
+PROBLEMA: Site não abre
+SOLUÇÃO: 
+- Verifique se o WAMP está com ícone VERDE
+- Tente acessar http://localhost/ primeiro
+- Reinicie o WAMP
+
+PROBLEMA: Formulário não envia
+SOLUÇÃO:
+- Verifique se configurou o email no send-email.php
+- As mensagens são salvas em: logs/contatos_YYYY-MM.txt
+- Verifique se a pasta logs tem permissão de escrita
+
+PROBLEMA: Imagens não aparecem
+SOLUÇÃO:
+- Verifique se as imagens estão em: assets/img/
+- Limpe o cache do navegador (Ctrl + F5)
+- Verifique os nomes dos arquivos
+
+PROBLEMA: Menu mobile não funciona
+SOLUÇÃO:
+- Pressione F12 no navegador e veja se há erros
+- Verifique se o arquivo assets/js/script.js existe
+- Limpe o cache do navegador
+
+================================================================================
+TESTAR O FORMULÁRIO DE CONTATO
+================================================================================
+
+1. Acesse o site: http://localhost/sacra/
+2. Role até a seção de Contato
+3. Preencha o formulário
+4. Clique em "Enviar mensagem"
+5. Verifique o arquivo: logs/contatos_YYYY-MM.txt
+
+Todas as mensagens são salvas neste arquivo!
+
+================================================================================
+CONFIGURAR EMAIL REAL (OPCIONAL)
+================================================================================
+
+Para enviar emails de verdade, você precisa configurar o SMTP:
+
+1. Clique no ícone do WAMP na bandeja
+2. Vá em: PHP > php.ini
+3. Procure por [mail function]
+4. Configure:
+   SMTP = smtp.gmail.com
+   smtp_port = 587
+   sendmail_from = seuemail@gmail.com
+
+OU use serviços como:
+- PHPMailer (recomendado)
+- SendGrid
+- Mailgun
+
+================================================================================
+SUPORTE
+================================================================================
+
+Para dúvidas:
+Email: contato@agenciasacra.com.br
+Instagram: @agenciasacra
+
+================================================================================
+INFORMAÇÕES TÉCNICAS
+================================================================================
+
+Tecnologias: HTML5, CSS3, JavaScript, PHP 7.4
+Responsivo: Sim (Desktop, Tablet, Mobile)
+Navegadores: Chrome, Firefox, Safari, Edge
+Servidor: Apache (WAMP)
+
+================================================================================
+
+Desenvolvido com ❤️ para SACRA - Agência de Marketing Digital
+
+"A gente se acostumou a se apresentar pelo que faz.
+Mas e se, por um momento, a gente se apresentasse pelo que é?"
+
+================================================================================
